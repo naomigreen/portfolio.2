@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -11,9 +10,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ParallaxProvider>
-      <App />
-    </ParallaxProvider>
+    <App />
   </React.StrictMode>
 );
 

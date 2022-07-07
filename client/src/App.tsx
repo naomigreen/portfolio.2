@@ -1,15 +1,18 @@
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import styled from 'styled-components';
+import { DataContext, useFetch } from './utils/hooks';
 import { themes, savedTheme, OSTheme } from './utils/theme/theme';
 import Routes from './containers/routes/Routes';
 
 const App = () => {
+  const gdpData = useFetch('/api/data/gdp', []);
+  const houseData = useFetch('/api/data/houses', []);
   const [theme, setTheme] = useState(savedTheme ? savedTheme : OSTheme);
+
   return (
     <ThemeProvider theme={themes[theme]}>
-      <ParallaxProvider>
+      <DataContext.Provider value={{ gdp: gdpData, houses: houseData, theme: theme, setTheme: setTheme } as any}>
         <Main>
           <Video
             autoPlay
@@ -20,14 +23,12 @@ const App = () => {
             poster="https://website-background.s3.eu-west-2.amazonaws.com/video-image.png"
             src="https://website-background.s3.eu-west-2.amazonaws.com/bg-compressed.mp4"
           />
-          <Routes setTheme={setTheme} theme={theme} />
+          <Routes />
         </Main>
-      </ParallaxProvider>
+      </DataContext.Provider>
     </ThemeProvider>
   )
 };
-
-
 
 const Video = styled.video`
 	width: 100%;

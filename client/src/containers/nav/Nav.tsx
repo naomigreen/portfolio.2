@@ -1,17 +1,15 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useContext } from 'react';
 import styled from 'styled-components';
 import store from 'store';
 import NavLink from '../../components/navLinks/NavLinks';
 import MobileMenu from '../../components/mobileMenu/MobileMenu';
 import { themes, themeData, themeDataType } from '../../utils/theme/theme';
+import { DataContext } from '../../utils/hooks';
 import Logo from '../../components/logo/Logo';
 import ThemeControl from '../../components/themeControl/ThemeControl';
 
-type NavComponentProps = {
-  setTheme: (theme: keyof typeof themes) => void;
-  theme: keyof typeof themes;
-}
-const NavComponent = ({ setTheme, theme }: NavComponentProps) => {
+const NavComponent = () => {
+  const { theme, setTheme } = useContext(DataContext)
   const [y, setY] = useState(document.scrollingElement?.scrollHeight)
   const [displayNav, setDisplayNav] = useState(true)
 
