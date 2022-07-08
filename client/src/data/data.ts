@@ -13,6 +13,9 @@ import {
   timesLogoLight,
   timesLogoDark,
   skyLogo,
+  githubLogo,
+  linkedinLogo,
+  codeIcon,
 } from '../assets/images';
 
 export const links = [
@@ -290,6 +293,12 @@ export const demo = `Unfortunately most of the projects I work on have non-discl
 therefore I've decided to demonstrate my passion for data visualisation using D3.`;
 
 export const bubbleInfo = 'Bubble chart';
+
+export const socialData = [
+  { image: linkedinLogo, link: 'https://www.linkedin.com/in/naomi-prescod-green-3299868a/' },
+  { image: githubLogo, link: 'https://github.com/naomigreen' },
+  { image: codeIcon, link: 'https://github.com/naomigreen/portfolio' },
+];
 
 export const workData = [
   { text: bbc, logo: bbcLogo, link: 'https://www.bbc.co.uk/aboutthebbc', width: '250px', maxWidth: '50%' },

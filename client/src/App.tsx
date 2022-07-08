@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={themes[theme]}>
-      <DataContext.Provider value={{ gdp: gdpData, houses: houseData, theme: theme, setTheme: setTheme } as any}>
+      <DataContext.Provider value={{ gdpData, houseData, theme, setTheme } as any}>
         <Main>
           <Video
             autoPlay

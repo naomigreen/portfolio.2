@@ -123,5 +123,4 @@ display: flex;
 justify-content: flex-end;
 `;
 
-
 export default MobileMenu;

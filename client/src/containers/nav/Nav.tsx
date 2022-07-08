@@ -97,7 +97,7 @@ position: fixed;
 z-index: 3;
 background-color: ${props => props.theme.secondary};
 box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.45);
-transition: top 0.3s ease-out;
+transition: top 0.4s ease-out;
 `
 const Controls = styled.div`
 .theme-icon{
