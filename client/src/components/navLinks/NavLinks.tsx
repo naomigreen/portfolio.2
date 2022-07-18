@@ -38,7 +38,7 @@ const Link = styled(NavLink)`
   display: inline-block;
   border-bottom: 2px solid #0000;
   padding: 10px 0;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.navText};
   text-decoration: none;
   z-index: 3;
   position: relative;

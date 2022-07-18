@@ -95,7 +95,7 @@ height: 80px;
 margin: 0 auto;
 position: fixed;
 z-index: 3;
-background-color: ${props => props.theme.secondary};
+background: ${props => props.theme.navColor};
 box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.45);
 transition: top 0.4s ease-out;
 `

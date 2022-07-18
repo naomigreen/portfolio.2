@@ -1,7 +1,9 @@
 import Content from '../../components/content/Content'
 import Card from '../../components/card/Card'
 import { workData } from '../../data/data';
+import { desk } from '../../assets/images';
 import { themes } from '../../utils/theme/theme';
+import Image from '../../components/image/Image';
 
 type HomeProps = {
   theme: keyof typeof themes;
@@ -18,6 +20,7 @@ const Home = (theme: HomeProps) => {
 
   return (
     <Content>
+      <Image image={desk} width='100%' />
       {workData.map((d, i) => (
         <Card key={d.link} logo={getLogo(d.logo, d.lightLogo)} width={d.width} maxWidth={d.maxWidth} link={d.link} text={d.text} divider={i === 9 ? false : true} />
       ))}

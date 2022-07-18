@@ -4,5 +4,4 @@ const TechTest = () => (
   <Content>TechTest</Content>
 )
 
-
 export default TechTest

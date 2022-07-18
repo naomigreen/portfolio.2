@@ -28,3 +28,6 @@ export { default as rollsLogo } from './logos/rolls.png';
 export { default as skyLogo } from './logos/sky.png';
 export { default as linkedinLogo } from './logos/linkedin.png';
 export { default as githubLogo } from './logos/github.png';
+export { default as logo } from './logos/logo.png';
+
+export { default as desk } from './desk.png';

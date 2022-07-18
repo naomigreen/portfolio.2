@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import rehypeRaw from 'rehype-raw'
-import ImageLink from '../imageLink/ImageLink';
+import Image from '../image/Image';
 
 type CardProps = {
   logo: string
@@ -14,7 +14,7 @@ type CardProps = {
 
 const Card = ({ logo, width, maxWidth, link, text, divider = true }: CardProps) => (
   <div>
-    <ImageLink link={link} width={width} maxWidth={maxWidth} image={logo} />
+    <Image link={link} width={width} maxWidth={maxWidth} image={logo} />
     <TextContainer rehypePlugins={[rehypeRaw]} >
       {text}
     </TextContainer>
